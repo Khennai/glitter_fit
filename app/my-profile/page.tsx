@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
-import { Sparkles, Award, Zap, TrendingUp, Edit2, Camera, LogOut, ChevronRight, Settings, Calendar, X } from 'lucide-react'
+import { useState, useRef } from 'react'
+import { Sparkles, Award, Zap, TrendingUp, Edit2, Camera, LogOut, Calendar, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'

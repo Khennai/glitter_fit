@@ -50,7 +50,7 @@ export default function ChooseFitnessStyle() {
               className="w-24 h-24 rounded-full border-4 border-pink-300"
             />
             <div className="bg-pink-200 p-3 rounded-lg">
-              <p className="text-pink-700 font-semibold">Let's customize your glittery fitness journey!</p>
+              <p className="text-pink-700 font-semibold">Let&apos;s customize your glittery fitness journey!</p>
             </div>
           </div>
           <p className="text-center text-pink-600">

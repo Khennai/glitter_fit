@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Sparkles, Activity, Calendar, TrendingUp, Award, CheckSquare, X, User, Plus, LogOut } from "lucide-react"
+import { Sparkles, Activity, TrendingUp, Award, X, User, Plus, LogOut } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -28,14 +28,13 @@ const checklistItems = [
 
 const activityData = [
   { day: 'Mon', percentage: 30, minutes: 45 },
-    { day: 'Tue', percentage: 45, minutes: 68 },
-    { day: 'Wed', percentage: 25, minutes: 38 },
-    { day: 'Thu', percentage: 60, minutes: 90 },
-    { day: 'Fri', percentage: 75, minutes: 113 },
-    { day: 'Sat', percentage: 40, minutes: 60 },
-    { day: 'Sun', percentage: 50, minutes: 75 },
-  ];
-
+  { day: 'Tue', percentage: 45, minutes: 68 },
+  { day: 'Wed', percentage: 25, minutes: 38 },
+  { day: 'Thu', percentage: 60, minutes: 90 },
+  { day: 'Fri', percentage: 75, minutes: 113 },
+  { day: 'Sat', percentage: 40, minutes: 60 },
+  { day: 'Sun', percentage: 50, minutes: 75 },
+];
 
 export default function MainDashboard() {
   const router = useRouter()
@@ -115,6 +114,7 @@ export default function MainDashboard() {
               <button
                 onClick={handleLogout}
                 className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-full transition duration-300"
+                aria-label="Logout"
               >
                 <LogOut className="h-5 w-5" />
               </button>
@@ -282,7 +282,7 @@ export default function MainDashboard() {
                 <X className="h-6 w-6" />
               </button>
             </div>
-            <p className="text-gray-700 mb-4">You've completed all your daily tasks! Keep up the great work and stay glittery!</p>
+            <p className="text-gray-700 mb-4">You&apos;ve completed all your daily tasks! Keep up the great work and stay glittery!</p>
             <button
               onClick={() => setShowCongrats(false)}
               className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded transition duration-300"
@@ -298,7 +298,7 @@ export default function MainDashboard() {
           <div className="bg-white rounded-lg p-8 max-w-md">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-bold text-pink-600">Leaving So Soon?!</h2>
-              <button onClick={() => setShowLogout(false)} className="text-gray-500 hover:text-gray-700">
+              <button onClick={() => setShowLogoutPrompt(false)} className="text-gray-500 hover:text-gray-700">
                 <X className="h-6 w-6" />
               </button>
             </div>
